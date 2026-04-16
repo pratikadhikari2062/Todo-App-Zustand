@@ -9,6 +9,7 @@ type TodoStore = {
   todos: Todo[];
   addTodo: (text: string) => void;
   deleteTodo: (id: number) => void;
+  clearAll: () => void;
 };
 
 export const useTodoStore = create<TodoStore>()((set) => ({
@@ -23,4 +24,5 @@ export const useTodoStore = create<TodoStore>()((set) => ({
     set((state) => ({
       todos: state.todos.filter((todo) => todo.id !== id),
     })),
+  clearAll: () => set({ todos: [] }),
 }));
