@@ -5,7 +5,7 @@ const Close: React.FC = () => {
   return (
     <div>
       {" "}
-      You have 4 pending task{" "}
+      You have {todos.length} pending task{" "}
       {todos.length > 0 && (
         <button
           onClick={clearAll}
