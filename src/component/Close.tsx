@@ -5,7 +5,7 @@ const Close: React.FC = () => {
   return (
     <div>
       {" "}
-      You have 4 pendrive task{" "}
+      You have 4 pending task{" "}
       {todos.length > 0 && (
         <button
           onClick={clearAll}
